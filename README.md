@@ -34,7 +34,7 @@ Cliente HTTP → Controller → Service → AppDbContext → Banco de Dados
 - **ASP.NET Core** - Framework web
 - **Entity Framework Core** - ORM para acesso a dados
 - **InMemoryDatabase** - Banco de dados em memória para desenvolvimento
-- **Swagger/OpenAPI** - Documentação automática da API
+- **Swagger** - Documentação da API
 
 ## 📋 Funcionalidades
 
