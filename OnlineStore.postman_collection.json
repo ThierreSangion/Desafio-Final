@@ -1,0 +1,193 @@
+{
+  "info": {
+    "_postman_id": "c9a07f2e-0000-0000-0000-online-store-api",
+    "name": "OnlineStore API - Produtos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Coleção de requests para testar a API REST de Produtos (OnlineStore.Api)."
+  },
+  "item": [
+    {
+      "name": "Listar todos os produtos (GET /api/v1/produtos)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/produtos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "produtos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar produto por ID (GET /api/v1/produtos/{id})",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/produtos/{{id}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "produtos",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Buscar produtos por nome (GET /api/v1/produtos/pesquisar?nome=)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/produtos/pesquisar?nome={{nome}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "produtos",
+            "pesquisar"
+          ],
+          "query": [
+            {
+              "key": "nome",
+              "value": "{{nome}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Contar produtos (GET /api/v1/produtos/contar)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/produtos/contar",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "produtos",
+            "contar"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Criar produto (POST /api/v1/produtos)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Produto de Teste\",\n  \"descricao\": \"Descrição do produto de teste\",\n  \"preco\": 99.90,\n  \"estoque\": 10\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/produtos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "produtos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Atualizar produto (PUT /api/v1/produtos/{id})",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Produto Atualizado\",\n  \"descricao\": \"Descrição atualizada\",\n  \"preco\": 149.90,\n  \"estoque\": 20\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/produtos/{{id}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "produtos",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Excluir produto (DELETE /api/v1/produtos/{id})",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/produtos/{{id}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "produtos",
+            "{{id}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://localhost:7000",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "nome",
+      "value": "Mouse",
+      "type": "string"
+    }
+  ]
+}
